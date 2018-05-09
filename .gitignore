@@ -1,0 +1,14 @@
+input
+*.swp
+*checkpoint.ipynb
+yohann.pem
+submission
+pytorch_code
+img/illus.key
+compte_rendu_kaggle.rtf
+notes_techniques_pytorch.rtf
+utilisation_aws
+README2.md
+
+
+

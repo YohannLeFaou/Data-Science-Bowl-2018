@@ -1,0 +1,72 @@
+tarting at epoch 51. LR=0.0001
+
+Checkpoint Path: /home/ubuntu/Kaggle-Data-Science-Bowl/common/Mask_RCNN/logs/nuclei_dat20180312T0927/mask_rcnn_nuclei_dat_{epoch:04d}.h5
+Selecting layers to train
+fpn_c5p5               (Conv2D)
+fpn_c4p4               (Conv2D)
+fpn_c3p3               (Conv2D)
+fpn_c2p2               (Conv2D)
+fpn_p5                 (Conv2D)
+fpn_p2                 (Conv2D)
+fpn_p3                 (Conv2D)
+fpn_p4                 (Conv2D)
+In model:  rpn_model
+    rpn_conv_shared        (Conv2D)
+    rpn_class_raw          (Conv2D)
+    rpn_bbox_pred          (Conv2D)
+mrcnn_mask_conv1       (TimeDistributed)
+mrcnn_mask_bn1         (TimeDistributed)
+mrcnn_mask_conv2       (TimeDistributed)
+mrcnn_mask_bn2         (TimeDistributed)
+mrcnn_class_conv1      (TimeDistributed)
+mrcnn_class_bn1        (TimeDistributed)
+mrcnn_mask_conv3       (TimeDistributed)
+mrcnn_mask_bn3         (TimeDistributed)
+mrcnn_class_conv2      (TimeDistributed)
+mrcnn_class_bn2        (TimeDistributed)
+mrcnn_mask_conv4       (TimeDistributed)
+mrcnn_mask_bn4         (TimeDistributed)
+mrcnn_bbox_fc          (TimeDistributed)
+mrcnn_mask_deconv      (TimeDistributed)
+mrcnn_class_logits     (TimeDistributed)
+mrcnn_mask             (TimeDistributed)
+WARNING:tensorflow:From /home/ubuntu/Kaggle-Data-Science-Bowl/common/Mask_RCNN/model.py:2073: calling reduce_mean (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+/home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/tensorflow/python/ops/gradients_impl.py:97: UserWarning: Converting sparse IndexedSlices to a dense Tensor of unknown shape. This may consume a large amount of memory.
+  "Converting sparse IndexedSlices to a dense Tensor of unknown shape. "
+/home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/keras/engine/training.py:2095: UserWarning: Using a generator with `use_multiprocessing=True` and multiple workers may duplicate your data. Please consider using the`keras.utils.Sequence class.
+  UserWarning('Using a generator with `use_multiprocessing=True`'
+Epoch 52/70
+ 76/250 [========>.....................] - ETA: 10:18 - loss: 0.7490 - rpn_class_loss: 0.0118 - rpn_bbox_loss: 0.2459 - mrcnn_class_loss: 0.1139 - mrcnn_bbox_loss: 0.1876 - mrcnn_mask_loss: 0.1898
+/home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/scipy/ndimage/interpolation.py:616: UserWarning: From scipy 0.13.0, the output shape of zoom() is calculated with round() instead of int() - for these inputs the size of the returned array has changed.
+  "the returned array has changed.", UserWarning)
+211/250 [========================>.....] - ETA: 2:11 - loss: 0.6706 - rpn_class_loss: 0.0123 - rpn_bbox_loss: 0.2178 - mrcnn_class_loss: 0.1045 - mrcnn_bbox_loss: 0.1424 - mrcnn_mask_loss: 0.1936
+/home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/scipy/ndimage/interpolation.py:616: UserWarning: From scipy 0.13.0, the output shape of zoom() is calculated with round() instead of int() - for these inputs the size of the returned array has changed.
+  "the returned array has changed.", UserWarning)
+250/250 [==============================] - 842s 3s/step - loss: 0.6645 - rpn_class_loss: 0.0126 - rpn_bbox_loss: 0.2159 - mrcnn_class_loss: 0.1035 - mrcnn_bbox_loss: 0.1381 - mrcnn_mask_loss: 0.1944 - val_loss: 0.6542 - val_rpn_class_loss: 0.0098 - val_rpn_bbox_loss: 0.2339 - val_mrcnn_class_loss: 0.1322 - val_mrcnn_bbox_loss: 0.0980 - val_mrcnn_mask_loss: 0.1804
+Epoch 53/70
+250/250 [==============================] - 807s 3s/step - loss: 0.5926 - rpn_class_loss: 0.0140 - rpn_bbox_loss: 0.1869 - mrcnn_class_loss: 0.0948 - mrcnn_bbox_loss: 0.1056 - mrcnn_mask_loss: 0.1913 - val_loss: 0.6918 - val_rpn_class_loss: 0.0088 - val_rpn_bbox_loss: 0.2288 - val_mrcnn_class_loss: 0.1580 - val_mrcnn_bbox_loss: 0.1084 - val_mrcnn_mask_loss: 0.1878
+Epoch 54/70
+250/250 [==============================] - 808s 3s/step - loss: 0.5938 - rpn_class_loss: 0.0123 - rpn_bbox_loss: 0.1845 - mrcnn_class_loss: 0.0945 - mrcnn_bbox_loss: 0.1069 - mrcnn_mask_loss: 0.1956 - val_loss: 0.6775 - val_rpn_class_loss: 0.0082 - val_rpn_bbox_loss: 0.2335 - val_mrcnn_class_loss: 0.1287 - val_mrcnn_bbox_loss: 0.1114 - val_mrcnn_mask_loss: 0.1957
+Epoch 55/70
+250/250 [==============================] - 806s 3s/step - loss: 0.5827 - rpn_class_loss: 0.0119 - rpn_bbox_loss: 0.1871 - mrcnn_class_loss: 0.0918 - mrcnn_bbox_loss: 0.1034 - mrcnn_mask_loss: 0.1884 - val_loss: 0.6507 - val_rpn_class_loss: 0.0083 - val_rpn_bbox_loss: 0.2314 - val_mrcnn_class_loss: 0.1256 - val_mrcnn_bbox_loss: 0.1027 - val_mrcnn_mask_loss: 0.1827
+Epoch 56/70
+250/250 [==============================] - 808s 3s/step - loss: 0.5841 - rpn_class_loss: 0.0124 - rpn_bbox_loss: 0.1822 - mrcnn_class_loss: 0.0948 - mrcnn_bbox_loss: 0.1031 - mrcnn_mask_loss: 0.1916 - val_loss: 0.6986 - val_rpn_class_loss: 0.0081 - val_rpn_bbox_loss: 0.2348 - val_mrcnn_class_loss: 0.1489 - val_mrcnn_bbox_loss: 0.1118 - val_mrcnn_mask_loss: 0.1950
+Epoch 57/70
+250/250 [==============================] - 808s 3s/step - loss: 0.5758 - rpn_class_loss: 0.0124 - rpn_bbox_loss: 0.1793 - mrcnn_class_loss: 0.0917 - mrcnn_bbox_loss: 0.1023 - mrcnn_mask_loss: 0.1901 - val_loss: 0.6687 - val_rpn_class_loss: 0.0073 - val_rpn_bbox_loss: 0.2266 - val_mrcnn_class_loss: 0.1182 - val_mrcnn_bbox_loss: 0.1189 - val_mrcnn_mask_loss: 0.1976
+Epoch 58/70
+250/250 [==============================] - 811s 3s/step - loss: 0.5917 - rpn_class_loss: 0.0121 - rpn_bbox_loss: 0.1836 - mrcnn_class_loss: 0.0950 - mrcnn_bbox_loss: 0.1072 - mrcnn_mask_loss: 0.1937 - val_loss: 0.6881 - val_rpn_class_loss: 0.0076 - val_rpn_bbox_loss: 0.2325 - val_mrcnn_class_loss: 0.1293 - val_mrcnn_bbox_loss: 0.1251 - val_mrcnn_mask_loss: 0.1935
+Epoch 59/70
+250/250 [==============================] - 809s 3s/step - loss: 0.5663 - rpn_class_loss: 0.0133 - rpn_bbox_loss: 0.1750 - mrcnn_class_loss: 0.0894 - mrcnn_bbox_loss: 0.0993 - mrcnn_mask_loss: 0.1892 - val_loss: 0.6691 - val_rpn_class_loss: 0.0074 - val_rpn_bbox_loss: 0.2308 - val_mrcnn_class_loss: 0.1261 - val_mrcnn_bbox_loss: 0.1158 - val_mrcnn_mask_loss: 0.1889
+Epoch 60/70
+250/250 [==============================] - 807s 3s/step - loss: 0.5818 - rpn_class_loss: 0.0119 - rpn_bbox_loss: 0.1787 - mrcnn_class_loss: 0.0946 - mrcnn_bbox_loss: 0.1041 - mrcnn_mask_loss: 0.1925 - val_loss: 0.6722 - val_rpn_class_loss: 0.0071 - val_rpn_bbox_loss: 0.2274 - val_mrcnn_class_loss: 0.1252 - val_mrcnn_bbox_loss: 0.1209 - val_mrcnn_mask_loss: 0.1915
+Epoch 61/70
+250/250 [==============================] - 809s 3s/step - loss: 0.5581 - rpn_class_loss: 0.0120 - rpn_bbox_loss: 0.1715 - mrcnn_class_loss: 0.0913 - mrcnn_bbox_loss: 0.0975 - mrcnn_mask_loss: 0.1858 - val_loss: 0.6735 - val_rpn_class_loss: 0.0069 - val_rpn_bbox_loss: 0.2270 - val_mrcnn_class_loss: 0.1441 - val_mrcnn_bbox_loss: 0.1102 - val_mrcnn_mask_loss: 0.1853
+Epoch 62/70
+250/250 [==============================] - 810s 3s/step - loss: 0.5662 - rpn_class_loss: 0.0112 - rpn_bbox_loss: 0.1764 - mrcnn_class_loss: 0.0888 - mrcnn_bbox_loss: 0.1000 - mrcnn_mask_loss: 0.1898 - val_loss: 0.6535 - val_rpn_class_loss: 0.0076 - val_rpn_bbox_loss: 0.2283 - val_mrcnn_class_loss: 0.1260 - val_mrcnn_bbox_loss: 0.1031 - val_mrcnn_mask_loss: 0.1885
+Epoch 63/70
+250/250 [==============================] - 812s 3s/step - loss: 0.5772 - rpn_class_loss: 0.0125 - rpn_bbox_loss: 0.1759 - mrcnn_class_loss: 0.0946 - mrcnn_bbox_loss: 0.1023 - mrcnn_mask_loss: 0.1920 - val_loss: 0.6788 - val_rpn_class_loss: 0.0073 - val_rpn_bbox_loss: 0.2328 - val_mrcnn_class_loss: 0.1142 - val_mrcnn_bbox_loss: 0.1270 - val_mrcnn_mask_loss: 0.1974
+Epoch 64/70
+250/250 [==============================] - 809s 3s/step - loss: 0.5630 - rpn_class_loss: 0.0108 - rpn_bbox_loss: 0.1759 - mrcnn_class_loss: 0.0871 - mrcnn_bbox_loss: 0.0998 - mrcnn_mask_loss: 0.1895 - val_loss: 0.7056 - val_rpn_class_loss: 0.0071 - val_rpn_bbox_loss: 0.2268 - val_mrcnn_class_loss: 0.1436 - val_mrcnn_bbox_loss: 0.1322 - val_mrcnn_mask_loss: 0.1960
+

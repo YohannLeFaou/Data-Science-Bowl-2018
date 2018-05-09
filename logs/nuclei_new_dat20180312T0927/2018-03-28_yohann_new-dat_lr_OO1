@@ -1,0 +1,315 @@
+
+-----------------------------------------------------------------------------------
+call :
+
+model.train(dataset_train, dataset_val, 
+            learning_rate=0.001,#config.LEARNING_RATE, #essaie d'un plus petit learning rate
+            epochs=55, 
+            layers='heads')
+
+-----------------------------------------------------------------------------------
+
+Starting at epoch 46. LR=0.001
+
+Checkpoint Path: /home/ubuntu/Kaggle-Data-Science-Bowl/common/Mask_RCNN/logs/nuclei_new_dat20180312T0927/mask_rcnn_nuclei_new_dat_{epoch:04d}.h5
+Selecting layers to train
+fpn_c5p5               (Conv2D)
+fpn_c4p4               (Conv2D)
+fpn_c3p3               (Conv2D)
+fpn_c2p2               (Conv2D)
+fpn_p5                 (Conv2D)
+fpn_p2                 (Conv2D)
+fpn_p3                 (Conv2D)
+fpn_p4                 (Conv2D)
+In model:  rpn_model
+    rpn_conv_shared        (Conv2D)
+    rpn_class_raw          (Conv2D)
+    rpn_bbox_pred          (Conv2D)
+mrcnn_mask_conv1       (TimeDistributed)
+mrcnn_mask_bn1         (TimeDistributed)
+mrcnn_mask_conv2       (TimeDistributed)
+mrcnn_mask_bn2         (TimeDistributed)
+mrcnn_class_conv1      (TimeDistributed)
+mrcnn_class_bn1        (TimeDistributed)
+mrcnn_mask_conv3       (TimeDistributed)
+mrcnn_mask_bn3         (TimeDistributed)
+mrcnn_class_conv2      (TimeDistributed)
+mrcnn_class_bn2        (TimeDistributed)
+mrcnn_mask_conv4       (TimeDistributed)
+mrcnn_mask_bn4         (TimeDistributed)
+mrcnn_bbox_fc          (TimeDistributed)
+mrcnn_mask_deconv      (TimeDistributed)
+mrcnn_class_logits     (TimeDistributed)
+mrcnn_mask             (TimeDistributed)
+WARNING:tensorflow:From /home/ubuntu/Kaggle-Data-Science-Bowl/common/Mask_RCNN/model.py:2073: calling reduce_mean (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+
+/home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/tensorflow/python/ops/gradients_impl.py:97: UserWarning: Converting sparse IndexedSlices to a dense Tensor of unknown shape. This may consume a large amount of memory.
+  "Converting sparse IndexedSlices to a dense Tensor of unknown shape. "
+/home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/keras/engine/training.py:2095: UserWarning: Using a generator with `use_multiprocessing=True` and multiple workers may duplicate your data. Please consider using the`keras.utils.Sequence class.
+  UserWarning('Using a generator with `use_multiprocessing=True`'
+
+Epoch 47/55
+108/250 [===========>..................] - ETA: 7:30 - loss: 0.6132 - rpn_class_loss: 0.0124 - rpn_bbox_loss: 0.2009 - mrcnn_class_loss: 0.0918 - mrcnn_bbox_loss: 0.1223 - mrcnn_mask_loss: 0.1856
+
+/home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/scipy/ndimage/interpolation.py:616: UserWarning: From scipy 0.13.0, the output shape of zoom() is calculated with round() instead of int() - for these inputs the size of the returned array has changed.
+  "the returned array has changed.", UserWarning)
+
+203/250 [=======================>......] - ETA: 2:24 - loss: 0.6227 - rpn_class_loss: 0.0128 - rpn_bbox_loss: 0.1984 - mrcnn_class_loss: 0.0980 - mrcnn_bbox_loss: 0.1202 - mrcnn_mask_loss: 0.1933
+
+/home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/scipy/ndimage/interpolation.py:616: UserWarning: From scipy 0.13.0, the output shape of zoom() is calculated with round() instead of int() - for these inputs the size of the returned array has changed.
+  "the returned array has changed.", UserWarning)
+
+250/250 [==============================] - 765s 3s/step - loss: 0.6169 - rpn_class_loss: 0.0124 - rpn_bbox_loss: 0.1967 - mrcnn_class_loss: 0.0959 - mrcnn_bbox_loss: 0.1182 - mrcnn_mask_loss: 0.1937 - val_loss: 0.4713 - val_rpn_class_loss: 0.0029 - val_rpn_bbox_loss: 0.1344 - val_mrcnn_class_loss: 0.0617 - val_mrcnn_bbox_loss: 0.0925 - val_mrcnn_mask_loss: 0.1798
+Epoch 48/55
+250/250 [==============================] - 743s 3s/step - loss: 0.6180 - rpn_class_loss: 0.0125 - rpn_bbox_loss: 0.1912 - mrcnn_class_loss: 0.0985 - mrcnn_bbox_loss: 0.1147 - mrcnn_mask_loss: 0.2009 - val_loss: 0.4360 - val_rpn_class_loss: 0.0024 - val_rpn_bbox_loss: 0.1295 - val_mrcnn_class_loss: 0.0694 - val_mrcnn_bbox_loss: 0.0730 - val_mrcnn_mask_loss: 0.1616
+Epoch 49/55
+250/250 [==============================] - 743s 3s/step - loss: 0.5950 - rpn_class_loss: 0.0114 - rpn_bbox_loss: 0.1864 - mrcnn_class_loss: 0.0936 - mrcnn_bbox_loss: 0.1086 - mrcnn_mask_loss: 0.1951 - val_loss: 0.4894 - val_rpn_class_loss: 0.0032 - val_rpn_bbox_loss: 0.1390 - val_mrcnn_class_loss: 0.0618 - val_mrcnn_bbox_loss: 0.0948 - val_mrcnn_mask_loss: 0.1906
+Epoch 50/55
+250/250 [==============================] - 741s 3s/step - loss: 0.5821 - rpn_class_loss: 0.0118 - rpn_bbox_loss: 0.1766 - mrcnn_class_loss: 0.0915 - mrcnn_bbox_loss: 0.1069 - mrcnn_mask_loss: 0.1954 - val_loss: 0.4778 - val_rpn_class_loss: 0.0021 - val_rpn_bbox_loss: 0.1359 - val_mrcnn_class_loss: 0.0570 - val_mrcnn_bbox_loss: 0.0969 - val_mrcnn_mask_loss: 0.1860
+Epoch 51/55
+250/250 [==============================] - 740s 3s/step - loss: 0.5960 - rpn_class_loss: 0.0120 - rpn_bbox_loss: 0.1814 - mrcnn_class_loss: 0.0934 - mrcnn_bbox_loss: 0.1112 - mrcnn_mask_loss: 0.1979 - val_loss: 0.5046 - val_rpn_class_loss: 0.0030 - val_rpn_bbox_loss: 0.1424 - val_mrcnn_class_loss: 0.0618 - val_mrcnn_bbox_loss: 0.0965 - val_mrcnn_mask_loss: 0.2009
+Epoch 52/55
+250/250 [==============================] - 739s 3s/step - loss: 0.5624 - rpn_class_loss: 0.0111 - rpn_bbox_loss: 0.1733 - mrcnn_class_loss: 0.0864 - mrcnn_bbox_loss: 0.1022 - mrcnn_mask_loss: 0.1895 - val_loss: 0.4678 - val_rpn_class_loss: 0.0029 - val_rpn_bbox_loss: 0.1370 - val_mrcnn_class_loss: 0.0610 - val_mrcnn_bbox_loss: 0.0885 - val_mrcnn_mask_loss: 0.1784
+Epoch 53/55
+250/250 [==============================] - 738s 3s/step - loss: 0.5825 - rpn_class_loss: 0.0107 - rpn_bbox_loss: 0.1793 - mrcnn_class_loss: 0.0903 - mrcnn_bbox_loss: 0.1070 - mrcnn_mask_loss: 0.1950 - val_loss: 0.4740 - val_rpn_class_loss: 0.0031 - val_rpn_bbox_loss: 0.1306 - val_mrcnn_class_loss: 0.0668 - val_mrcnn_bbox_loss: 0.0975 - val_mrcnn_mask_loss: 0.1761
+Epoch 54/55
+250/250 [==============================] - 740s 3s/step - loss: 0.5758 - rpn_class_loss: 0.0113 - rpn_bbox_loss: 0.1719 - mrcnn_class_loss: 0.0924 - mrcnn_bbox_loss: 0.1061 - mrcnn_mask_loss: 0.1942 - val_loss: 0.4223 - val_rpn_class_loss: 0.0044 - val_rpn_bbox_loss: 0.1278 - val_mrcnn_class_loss: 0.0459 - val_mrcnn_bbox_loss: 0.0832 - val_mrcnn_mask_loss: 0.1611
+Epoch 55/55
+250/250 [==============================] - 743s 3s/step - loss: 0.5699 - rpn_class_loss: 0.0110 - rpn_bbox_loss: 0.1727 - mrcnn_class_loss: 0.0910 - mrcnn_bbox_loss: 0.1031 - mrcnn_mask_loss: 0.1921 - val_loss: 0.4919 - val_rpn_class_loss: 0.0027 - val_rpn_bbox_loss: 0.1359 - val_mrcnn_class_loss: 0.0565 - val_mrcnn_bbox_loss: 0.1089 - val_mrcnn_mask_loss: 0.1880
+
+————————————————————————-------------------------------------------------------
+call :
+
+model.train(dataset_train, dataset_val, 
+            learning_rate=0.0001,#config.LEARNING_RATE, #essaie d'un plus petit learning rate
+            epochs=60, 
+            layers='4+')
+
+-------------------------------------------------------------------------------
+
+
+
+Starting at epoch 55. LR=0.0001
+
+Checkpoint Path: /home/ubuntu/Kaggle-Data-Science-Bowl/common/Mask_RCNN/logs/nuclei_new_dat20180312T0927/mask_rcnn_nuclei_new_dat_{epoch:04d}.h5
+Selecting layers to train
+res4a_branch2a         (Conv2D)
+bn4a_branch2a          (BatchNorm)
+res4a_branch2b         (Conv2D)
+bn4a_branch2b          (BatchNorm)
+res4a_branch2c         (Conv2D)
+res4a_branch1          (Conv2D)
+bn4a_branch2c          (BatchNorm)
+bn4a_branch1           (BatchNorm)
+res4b_branch2a         (Conv2D)
+bn4b_branch2a          (BatchNorm)
+res4b_branch2b         (Conv2D)
+bn4b_branch2b          (BatchNorm)
+res4b_branch2c         (Conv2D)
+bn4b_branch2c          (BatchNorm)
+res4c_branch2a         (Conv2D)
+bn4c_branch2a          (BatchNorm)
+res4c_branch2b         (Conv2D)
+bn4c_branch2b          (BatchNorm)
+res4c_branch2c         (Conv2D)
+bn4c_branch2c          (BatchNorm)
+res4d_branch2a         (Conv2D)
+bn4d_branch2a          (BatchNorm)
+res4d_branch2b         (Conv2D)
+bn4d_branch2b          (BatchNorm)
+res4d_branch2c         (Conv2D)
+bn4d_branch2c          (BatchNorm)
+res4e_branch2a         (Conv2D)
+bn4e_branch2a          (BatchNorm)
+res4e_branch2b         (Conv2D)
+bn4e_branch2b          (BatchNorm)
+res4e_branch2c         (Conv2D)
+bn4e_branch2c          (BatchNorm)
+res4f_branch2a         (Conv2D)
+bn4f_branch2a          (BatchNorm)
+res4f_branch2b         (Conv2D)
+bn4f_branch2b          (BatchNorm)
+res4f_branch2c         (Conv2D)
+bn4f_branch2c          (BatchNorm)
+res4g_branch2a         (Conv2D)
+bn4g_branch2a          (BatchNorm)
+res4g_branch2b         (Conv2D)
+bn4g_branch2b          (BatchNorm)
+res4g_branch2c         (Conv2D)
+bn4g_branch2c          (BatchNorm)
+res4h_branch2a         (Conv2D)
+bn4h_branch2a          (BatchNorm)
+res4h_branch2b         (Conv2D)
+bn4h_branch2b          (BatchNorm)
+res4h_branch2c         (Conv2D)
+bn4h_branch2c          (BatchNorm)
+res4i_branch2a         (Conv2D)
+bn4i_branch2a          (BatchNorm)
+res4i_branch2b         (Conv2D)
+bn4i_branch2b          (BatchNorm)
+res4i_branch2c         (Conv2D)
+bn4i_branch2c          (BatchNorm)
+res4j_branch2a         (Conv2D)
+bn4j_branch2a          (BatchNorm)
+res4j_branch2b         (Conv2D)
+bn4j_branch2b          (BatchNorm)
+res4j_branch2c         (Conv2D)
+bn4j_branch2c          (BatchNorm)
+res4k_branch2a         (Conv2D)
+bn4k_branch2a          (BatchNorm)
+res4k_branch2b         (Conv2D)
+bn4k_branch2b          (BatchNorm)
+res4k_branch2c         (Conv2D)
+bn4k_branch2c          (BatchNorm)
+res4l_branch2a         (Conv2D)
+bn4l_branch2a          (BatchNorm)
+res4l_branch2b         (Conv2D)
+bn4l_branch2b          (BatchNorm)
+res4l_branch2c         (Conv2D)
+bn4l_branch2c          (BatchNorm)
+res4m_branch2a         (Conv2D)
+bn4m_branch2a          (BatchNorm)
+res4m_branch2b         (Conv2D)
+bn4m_branch2b          (BatchNorm)
+res4m_branch2c         (Conv2D)
+bn4m_branch2c          (BatchNorm)
+res4n_branch2a         (Conv2D)
+bn4n_branch2a          (BatchNorm)
+res4n_branch2b         (Conv2D)
+bn4n_branch2b          (BatchNorm)
+res4n_branch2c         (Conv2D)
+bn4n_branch2c          (BatchNorm)
+res4o_branch2a         (Conv2D)
+bn4o_branch2a          (BatchNorm)
+res4o_branch2b         (Conv2D)
+bn4o_branch2b          (BatchNorm)
+res4o_branch2c         (Conv2D)
+bn4o_branch2c          (BatchNorm)
+res4p_branch2a         (Conv2D)
+bn4p_branch2a          (BatchNorm)
+res4p_branch2b         (Conv2D)
+bn4p_branch2b          (BatchNorm)
+res4p_branch2c         (Conv2D)
+bn4p_branch2c          (BatchNorm)
+res4q_branch2a         (Conv2D)
+bn4q_branch2a          (BatchNorm)
+res4q_branch2b         (Conv2D)
+bn4q_branch2b          (BatchNorm)
+res4q_branch2c         (Conv2D)
+bn4q_branch2c          (BatchNorm)
+res4r_branch2a         (Conv2D)
+bn4r_branch2a          (BatchNorm)
+res4r_branch2b         (Conv2D)
+bn4r_branch2b          (BatchNorm)
+res4r_branch2c         (Conv2D)
+bn4r_branch2c          (BatchNorm)
+res4s_branch2a         (Conv2D)
+bn4s_branch2a          (BatchNorm)
+res4s_branch2b         (Conv2D)
+bn4s_branch2b          (BatchNorm)
+res4s_branch2c         (Conv2D)
+bn4s_branch2c          (BatchNorm)
+res4t_branch2a         (Conv2D)
+bn4t_branch2a          (BatchNorm)
+res4t_branch2b         (Conv2D)
+bn4t_branch2b          (BatchNorm)
+res4t_branch2c         (Conv2D)
+bn4t_branch2c          (BatchNorm)
+res4u_branch2a         (Conv2D)
+bn4u_branch2a          (BatchNorm)
+res4u_branch2b         (Conv2D)
+bn4u_branch2b          (BatchNorm)
+res4u_branch2c         (Conv2D)
+bn4u_branch2c          (BatchNorm)
+res4v_branch2a         (Conv2D)
+bn4v_branch2a          (BatchNorm)
+res4v_branch2b         (Conv2D)
+bn4v_branch2b          (BatchNorm)
+res4v_branch2c         (Conv2D)
+bn4v_branch2c          (BatchNorm)
+res4w_branch2a         (Conv2D)
+bn4w_branch2a          (BatchNorm)
+res4w_branch2b         (Conv2D)
+bn4w_branch2b          (BatchNorm)
+res4w_branch2c         (Conv2D)
+bn4w_branch2c          (BatchNorm)
+res5a_branch2a         (Conv2D)
+bn5a_branch2a          (BatchNorm)
+res5a_branch2b         (Conv2D)
+bn5a_branch2b          (BatchNorm)
+res5a_branch2c         (Conv2D)
+res5a_branch1          (Conv2D)
+bn5a_branch2c          (BatchNorm)
+bn5a_branch1           (BatchNorm)
+res5b_branch2a         (Conv2D)
+bn5b_branch2a          (BatchNorm)
+res5b_branch2b         (Conv2D)
+bn5b_branch2b          (BatchNorm)
+res5b_branch2c         (Conv2D)
+bn5b_branch2c          (BatchNorm)
+res5c_branch2a         (Conv2D)
+bn5c_branch2a          (BatchNorm)
+res5c_branch2b         (Conv2D)
+bn5c_branch2b          (BatchNorm)
+res5c_branch2c         (Conv2D)
+bn5c_branch2c          (BatchNorm)
+fpn_c5p5               (Conv2D)
+fpn_c4p4               (Conv2D)
+fpn_c3p3               (Conv2D)
+fpn_c2p2               (Conv2D)
+fpn_p5                 (Conv2D)
+fpn_p2                 (Conv2D)
+fpn_p3                 (Conv2D)
+fpn_p4                 (Conv2D)
+In model:  rpn_model
+    rpn_conv_shared        (Conv2D)
+    rpn_class_raw          (Conv2D)
+    rpn_bbox_pred          (Conv2D)
+mrcnn_mask_conv1       (TimeDistributed)
+mrcnn_mask_bn1         (TimeDistributed)
+mrcnn_mask_conv2       (TimeDistributed)
+mrcnn_mask_bn2         (TimeDistributed)
+mrcnn_class_conv1      (TimeDistributed)
+mrcnn_class_bn1        (TimeDistributed)
+mrcnn_mask_conv3       (TimeDistributed)
+mrcnn_mask_bn3         (TimeDistributed)
+mrcnn_class_conv2      (TimeDistributed)
+mrcnn_class_bn2        (TimeDistributed)
+mrcnn_mask_conv4       (TimeDistributed)
+mrcnn_mask_bn4         (TimeDistributed)
+mrcnn_bbox_fc          (TimeDistributed)
+mrcnn_mask_deconv      (TimeDistributed)
+mrcnn_class_logits     (TimeDistributed)
+mrcnn_mask             (TimeDistributed)
+
+/home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/tensorflow/python/ops/gradients_impl.py:97: UserWarning: Converting sparse IndexedSlices to a dense Tensor of unknown shape. This may consume a large amount of memory.
+  "Converting sparse IndexedSlices to a dense Tensor of unknown shape. "
+/home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/keras/engine/training.py:2095: UserWarning: Using a generator with `use_multiprocessing=True` and multiple workers may duplicate your data. Please consider using the`keras.utils.Sequence class.
+  UserWarning('Using a generator with `use_multiprocessing=True`'
+
+Epoch 56/60
+ 62/250 [======>.......................] - ETA: 12:19 - loss: 0.5996 - rpn_class_loss: 0.0121 - rpn_bbox_loss: 0.1764 - mrcnn_class_loss: 0.1027 - mrcnn_bbox_loss: 0.1096 - mrcnn_mask_loss: 0.1988
+
+/home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/scipy/ndimage/interpolation.py:616: UserWarning: From scipy 0.13.0, the output shape of zoom() is calculated with round() instead of int() - for these inputs the size of the returned array has changed.
+  "the returned array has changed.", UserWarning)
+
+ 95/250 [==========>...................] - ETA: 9:53 - loss: 0.5740 - rpn_class_loss: 0.0110 - rpn_bbox_loss: 0.1686 - mrcnn_class_loss: 0.0964 - mrcnn_bbox_loss: 0.1039 - mrcnn_mask_loss: 0.1941
+
+/home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/scipy/ndimage/interpolation.py:616: UserWarning: From scipy 0.13.0, the output shape of zoom() is calculated with round() instead of int() - for these inputs the size of the returned array has changed.
+  "the returned array has changed.", UserWarning)
+
+250/250 [==============================] - 926s 4s/step - loss: 0.5596 - rpn_class_loss: 0.0110 - rpn_bbox_loss: 0.1635 - mrcnn_class_loss: 0.0931 - mrcnn_bbox_loss: 0.1007 - mrcnn_mask_loss: 0.1913 - val_loss: 0.8744 - val_rpn_class_loss: 0.0222 - val_rpn_bbox_loss: 0.3788 - val_mrcnn_class_loss: 0.1276 - val_mrcnn_bbox_loss: 0.1367 - val_mrcnn_mask_loss: 0.2092
+Epoch 57/60
+250/250 [==============================] - 898s 4s/step - loss: 0.5361 - rpn_class_loss: 0.0099 - rpn_bbox_loss: 0.1577 - mrcnn_class_loss: 0.0869 - mrcnn_bbox_loss: 0.0956 - mrcnn_mask_loss: 0.1860 - val_loss: 0.8818 - val_rpn_class_loss: 0.0250 - val_rpn_bbox_loss: 0.4082 - val_mrcnn_class_loss: 0.1156 - val_mrcnn_bbox_loss: 0.1345 - val_mrcnn_mask_loss: 0.1984
+Epoch 58/60
+250/250 [==============================] - 904s 4s/step - loss: 0.5322 - rpn_class_loss: 0.0100 - rpn_bbox_loss: 0.1535 - mrcnn_class_loss: 0.0846 - mrcnn_bbox_loss: 0.0956 - mrcnn_mask_loss: 0.1884 - val_loss: 0.9248 - val_rpn_class_loss: 0.0247 - val_rpn_bbox_loss: 0.3980 - val_mrcnn_class_loss: 0.1385 - val_mrcnn_bbox_loss: 0.1501 - val_mrcnn_mask_loss: 0.2135
+Epoch 59/60
+250/250 [==============================] - 902s 4s/step - loss: 0.5334 - rpn_class_loss: 0.0100 - rpn_bbox_loss: 0.1515 - mrcnn_class_loss: 0.0890 - mrcnn_bbox_loss: 0.0954 - mrcnn_mask_loss: 0.1875 - val_loss: 0.9274 - val_rpn_class_loss: 0.0237 - val_rpn_bbox_loss: 0.3912 - val_mrcnn_class_loss: 0.1380 - val_mrcnn_bbox_loss: 0.1535 - val_mrcnn_mask_loss: 0.2211
+Epoch 60/60
+250/250 [==============================] - 903s 4s/step - loss: 0.5083 - rpn_class_loss: 0.0100 - rpn_bbox_loss: 0.1422 - mrcnn_class_loss: 0.0829 - mrcnn_bbox_loss: 0.0902 - mrcnn_mask_loss: 0.1830 - val_loss: 0.9281 - val_rpn_class_loss: 0.0265 - val_rpn_bbox_loss: 0.3973 - val_mrcnn_class_loss: 0.1432 - val_mrcnn_bbox_loss: 0.1455 - val_mrcnn_mask_loss: 0.2156
+
+
+
+
